@@ -8,6 +8,23 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+.btn{
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.btn-green{
+    background: #ffa625;
+    color: #000000;
+    box-shadow: 0 5px 0 #c5801d;
+}
 
 body {
   background: #fff;
