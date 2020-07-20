@@ -1069,6 +1069,126 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-transform: uppercase;
 }
 
+/* Seção Blog
+--------------------------------*/
+
+#blog {
+  padding: 60px 0;
+}
+
+#blog .blog-wrap {
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+#blog .blog-wrap:hover {
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.16);
+}
+
+#blog .blog-item {
+  position: relative;
+  height: 360px;
+  overflow: hidden;
+}
+
+#blog .blog-item figure {
+  background: #000;
+  overflow: hidden;
+  height: 240px;
+  position: relative;
+  border-radius: 4px 4px 0 0;
+  margin: 0;
+}
+
+#blog .blog-item figure:hover img {
+  opacity: 0.4;
+  transition: 0.3s;
+}
+
+#blog .blog-item figure .link-preview,
+#blog .blog-item figure .link-details {
+  position: absolute;
+  display: inline-block;
+  opacity: 0;
+  line-height: 1;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  border-radius: 50%;
+  transition: 0.2s linear;
+}
+
+#blog .blog-item figure .link-preview i,
+#blog .blog-item figure .link-details i {
+  padding-top: 6px;
+  font-size: 22px;
+  color: #333;
+}
+
+#blog .blog-item figure .link-preview:hover,
+#blog .blog-item figure .link-details:hover {
+  background: #ffa625;
+}
+
+#blog .blog-item figure .link-preview:hover i,
+#blog .blog-item figure .link-details:hover i {
+  color: #fff;
+}
+
+#blog .blog-item figure .link-preview {
+  left: calc(50% - 38px);
+  top: calc(50% - 18px);
+}
+
+#blog .blog-item figure .link-details {
+  right: calc(50% - 38px);
+  top: calc(50% - 18px);
+}
+
+#blog .blog-item figure:hover .link-preview {
+  opacity: 1;
+  left: calc(50% - 44px);
+}
+
+#blog .blog-item figure:hover .link-details {
+  opacity: 1;
+  right: calc(50% - 44px);
+}
+
+#blog .blog-item .blog-info {
+  background: #fff;
+  text-align: center;
+  padding: 30px;
+  height: 90px;
+  border-radius: 0 0 3px 3px;
+}
+
+#blog .blog-item .blog-info h4 {
+  font-size: 18px;
+  line-height: 1px;
+  font-weight: 700;
+  margin-bottom: 18px;
+  padding-bottom: 0;
+}
+
+#blog .blog-item .blog-info h4 a {
+  color: #333;
+}
+
+#blog .blog-item .blog-info h4 a:hover {
+  color: #ffa625;
+}
+
+#blog .blog-item .blog-info p {
+  padding: 0;
+  margin: 0;
+  color: #b8b8b8;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
 /* Seção Cliente
 --------------------------------*/
 

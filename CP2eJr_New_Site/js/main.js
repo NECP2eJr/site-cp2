@@ -186,6 +186,19 @@
     portfolioIsotope.isotope({ filter: $(this).data('filter') });
   });
 
+  // Blog isotope 
+  var blogIsotope = $('.blog-container').isotope({
+    itemSelector: '.blog-item',
+    layoutMode: 'fitRows'
+  });
+
+  $('#blog-flters li').on( 'click', function() {
+    $("#blog-flters li").removeClass('filter-active');
+    $(this).addClass('filter-active');
+
+    blogIsotope.isotope({ filter: $(this).data('filter') });
+  });
+
   // Clients carousel (uses the Owl Carousel library)
   $(".clients-carousel").owlCarousel({
     autoplay: true,
