@@ -1,31 +1,32 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>CP2eJr | Empresa Júnior</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+  <meta charset="utf-8">
+  <!-- NÚCLEO DE ENGENHARIA DA EMPRESA JR É FERA DEMAIS!!!! By Erick Braun Goecking <3 -->
+  <title>CP2eJr | Empresa Júnior</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
 
-    <!-- Favicons -->
-    <link href="img/favicon.png" rel="icon">
-    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
-    <!-- Bootstrap CSS File -->
-    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Libraries CSS Files -->
-    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
 
-    <!-- Main Stylesheet File -->
-    <link href="css/style.css" rel="stylesheet">
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
 
 </head>
 <body>
@@ -37,41 +38,302 @@
     <div class="container-fluid">
 
       <div id="logo" class="pull-left">
-        <h1><a href="#intro" class="scrollto">CP2eJr</a></h1>
+        <h1><a href="index.html" class="scrollto">CP2eJr</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="#intro"><img src="img/logo.png" alt="" title="" /></a>-->
       </div>
 
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li><a href="index.html">CP2eJr</a></li>
-          <li class="menu-active"><a href="#processo">Inscrição Processo Seletivo</a></li>
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#services">Serviços</a></li>
-          <li><a href="#portfolio">Portifólio</a></li>
-          <li><a href="#team">Equipe</a></li>
-          <li><a href="#contact">Contato</a></li>
+          <li><a href="index.html">Página Principal </a></li>
+          <li class="menu-active"><a href="processo.html">Processo Seletivo</a></li> 
+          <li><a href="blog.html">Blog</a></li> 
+          
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
   </header><!-- #header -->
 
-<main id="main">
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro">
+    <div class="intro-container">
+      <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active">
+            <div class="carousel-background"><img src="img/blog.jpg" alt=""></div>
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2>PROCESSO SELETIVO</h2>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section><!-- #intro -->
+
+  <main id="main">
+
+    <!--==========================
+      Processo Seletivo
+    ============================-->
+    <section id="contact" class="section-bg wow fadeInUp">
+      <div class="container">
+
+        <div class="section-header">
+          <h3>Processo Seletivo CP2eJr</h3>
+          <p>Seja parte da nossa equipe!</p>
+        </div>
+
+        <p style="padding: 20px 0px;">Para fazer sua inscrição, recomendamos que você leia atentamente o
+          edital do processo seletivo,
+          onde estão todas as informações sobre as fases do processo, nossa cultura e uma descrição do
+          trabalho de cada núcleo.</p>
+
+        <a href="processo_seletivo/edital_ps_cp2ejr.pdf" target="_blank">
+            <button type="button" class="btn btn-default btn-lg download">
+                <span class="glyphicon glyphicon-download-alt"></span> Edital
+            </button>
+        </a>
+
+        <p style="padding: 20px 0px;">Preparamos também um e-book listando cinco motivos para te
+          convencer a ser um membro da Empresa Júnior.</p>
+
+        <a href="processo_seletivo/ebook_cp2ejr.pdf" target="_blank">
+            <button type="button" class="btn btn-default btn-lg download">
+                <span class="glyphicon glyphicon-download-alt"></span> Ebook
+            </button>
+        </a>
+        <br> <br>
+
+
+        <div class="form">
+          <form method="post" action="php/processoseletivo.php" enctype="multipart/form-data">
+            <div class="row">
+              <!-- Nome do candidato -->
+              <div class="col-md-4 col-sm-4">
+                  <input type="text" name="nome" class="form-control" id="nomeid" placeholder="Nome" data-rule="minlen:4" data-msg="Por favor, insira pelo menos 4 caracteres." />
+              </div>
+
+              <!-- Curso -->
+              <div class="col-md-4 col-sm-4">
+                  <select required name="curso" class="form-control">
+                      <option value="" selected data-default disabled>Curso</option>
+                      <option value="Engenharia Elétrica">Engenharia Elétrica</option>
+                      <option value="Engenharia da Computação">Engenharia da Computação</option>
+                      <option value="Engenharia de Telecomunicações">Engenharia de Telecomunicações</option>
+                      <option value="Engenharia Biomédica">Engenharia Biomédica</option>
+                      <option value="Engenharia de Controle e Automação">Engenharia de Controle e Automação</option>
+                      <option value="Engenharia de Produção">Engenharia de Produção</option>
+                      <option value="Engenharia de Software">Engenharia de Software</option>
+                      <option value="Tec. em Redes de Computadores">Tec. em Redes de Computadores</option>
+                      <option value="Tec. em Automação Indústrial">Tec. em Automação Indústrial</option>
+                      <option value="Tec. em Gestão de Telecomunicações">Tec. em Gestão de Telecomunicações</option>
+                      <option value="Curso de Aluno Especial">Curso de Aluno Especial</option>
+                  </select>
+                  <!--<input class="form-control" id="cursoid" name="curso" required placeholder="Curso"/>-->
+              </div>
+
+              <!-- Período -->
+              <div class="col-md-4 col-sm-4">
+                  <select required id="periodoid" name="periodo" class="form-control">
+                      <option value="" selected data-default disabled>Período</option>
+                      <option value="1° período">1° período</option>
+                      <option value="2° período">2° período</option>
+                      <option value="3° período">3° período</option>
+                      <option value="4° período">4° período</option>
+                      <option value="5° período">5° período</option>
+                      <option value="6° período">6° período</option>
+                      <option value="7° período">7° período</option>
+                      <option value="8° período">8° período</option>
+                      <option value="9° período">9° período</option>
+                      <option value="10° período">10° período</option>
+                  </select>
+              </div>
+            </div>
+
+            <div class="row">
+              <!-- Matrícula -->
+              <div class="col-md-4 col-sm-4">
+                <input class="form-control" id="matriculaid" name="matricula" required placeholder="Matrícula"/>
+              </div>
+
+              <!-- Telefone -->
+              <div class="col-md-4 col-sm-4">
+                  <input class="form-control" id="telefoneid" name="telefone" required placeholder="Telefone"/>
+              </div>
+
+              <!-- Email do Inatel-->
+              <div class="col-md-4 col-sm-4">
+                  <input class="form-control" id="emailid" type="email" name="email" required placeholder="Email do Inatel"/>
+              </div>
+            </div>
+            <br>
+          
+            <div class="row">
+                <label for="">Núcleo</label>
+            </div>
+
+            <div class="row">
+              <!-- Núcleo de Preferência (Recomenda-se o NE - Melhor Núcleo - O Groove e a Lenda) -->   
+              <div class="col-md-4 col-sm-4">
+                  <select required id="nucleosid" name="nucleo_preferencia" class="form-control">
+                      <option value="" selected data-default disabled>Núcleo de Interesse</option>
+                      <option value="NAI">Núcleo de Assuntos Internos</option>
+                      <option value="NE">Núcleo de Engenharia</option>
+                      <option value="NGCT">Núcleo de Gestão de Conhecimento e Treinamentos</option>
+                      <option value="NPSP">Núcleo de Projetos Sociais e Promoção</option>
+                  </select>
+              </div>
+
+              <!-- Núcleo Opcional -->   
+              <div class="col-md-4 col-sm-4">
+                  <select id="nucleosid" name="nucleo_opcional" class="form-control">
+                      <option value="">Núcleo Opcional</option>
+                      <option value="NAI">Núcleo de Assuntos Internos</option>
+                      <option value="NE">Núcleo de Engenharia</option>
+                      <option value="NGCT">Núcleo de Gestão de Conhecimento e Treinamentos</option>
+                      <option value="NPSP">Núcleo de Projetos Sociais e Promoção</option>
+                  </select>
+              </div>
+            </div>
+            <br>
+          
+            <!-- Curriculo -->
+            <div class="row">
+                <label> Currículo atual (PDF): </label>
+                <input required name="attach1" type="file"/>
+            </div>
+            <br>
+          
+            <!-- Foto do candidato -->
+            <div class="row">
+                <label> Foto recente: </label>
+                <input required name="attach2" type="file"/>
+            </div>
+            <br>
+          
+            <!--Horário do Semestre-->
+            <div class="row">
+                <label> Horário do Semestre: </label>
+                <input required name="attach3" type="file"/>
+            </div>
+            <br>
+          
+            <!-- Como ficou sabendo da empresa -->
+            <div class="row">
+                <label for="">Como ficou sabendo da Empresa Júnior</label>
+                <textarea id="atividades1id" name="como_soube" class="form-control" 
+                placeholder="Amigos, flyers, redes sociais, outros..."
+                    onresize="none" required></textarea>
+            </div>
+            <br>
+          
+            <!--Atividades que participa-->
+            <div class="row">
+                <label for="">Atividades que participa dentro do Inatel</label>
+                <textarea id="atividades1id" name="atividades" class="form-control"
+                        placeholder="Casa Viva, iniciação científica, estágio, monitoria..."
+                        onresize="none" required></textarea>
+            </div>
+            <br>
+
+            <!--Botão Enviar-->
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                  <div class="text-center">
+                    <button id="submit" name="submit" type="submit" class="form-control" onclick="Enviar();">Enviar Inscrição</button>
+                  </div>
+                </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!--==========================
-    Processo Seletivo
+    Footer
   ============================-->
-  <section id="processo">
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-5 col-md-6 footer-info">
+            <h3>CP2eJr</h3>
+            <p style="text-align:justify">A CP2eJr é uma empresa sem fins lucrativos nascida da vontade de empreender de alguns dos milhares de alunos do Instituto Nacional de Telecomunicações.</p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-contact">
+            <h4>Contato</h4>
+            <p>
+              Avenida João de Camargo, 510, Centro.<br/>
+              Campos do INATEL<br/>
+              Prédio da Incubadora, Sala 12<br/>
+              Santa Rita do Sapucaí, MG<br/>
+              Brasil<br/>
+              <strong>Telefone:</strong> +55 35 3471-9200<br>
+              <strong>E-mail:</strong> cp2ejr-diretoria@inatel.br<br>
+            </p>
+
+            <div class="social-links">
+              <a href="https://www.facebook.com/Empresa.Junior.Inatel/" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="https://www.instagram.com/cp2ejr/" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="https://www.linkedin.com/company/cp2ejr---junior-company-inatel/?viewAsMember=true" class="linkedin"><i class="fa fa-linkedin"></i></a>
+            </div>
+
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-newsletter">
+            <body>
+            <h1> </h1>
+            <h1> </h1>
+            <h1> </h1>
+            <h1> </h1>
+              <img src="img/logo.png" alt="some text" width=250 height=120>
+            </body>
+          </div>
 
 
+        </div>
+      </div>
+    </div>
 
-  </section>
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong>CP2eJr</strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        Designed by <a>CP2eJr</a>
+      </div>
+    </div>
+  </footer><!-- #footer -->
 
-</main>
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <!-- Uncomment below i you want to use a preloader -->
+  <!-- <div id="preloader"></div> -->
 
-<footer id="footer">
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="lib/touchSwipe/jquery.touchSwipe.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
 
-</footer>
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
 </body>
-</html>
-

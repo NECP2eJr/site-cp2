@@ -1,0 +1,54 @@
+/* Este css nao possui todas as configuraços presente no home. */
+/* Existe para não sobrecarregar outras abas com o tamanho do arquivo */
+/* E para organização, contendo coisas criadas pós template original */
+
+.col-md-4 {
+    padding-left: 0px;
+}
+
+.col-md-12 {
+    padding-left: 0;
+}
+
+form {
+    padding-top: 32px;
+}
+
+.form-control {
+    border: 2px solid #b2b2b2;
+    box-shadow: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: all 0.4s ease-in-out;
+}
+
+.form-control:hover {
+    border-color: #3D50A2;
+}
+
+::placeholder {
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.4s ease-in-out;
+}
+
+.form-control:hover::placeholder{
+    color: #3D50A2;
+}
+
+input,select {
+    height: 50px;
+}
+
+input[type="submit"], .download {
+    background: #F9A21F;
+    border-radius: 100px;
+    border: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: all 0.4s ease-in-out;
+}
+
+input[type="submit"]:hover, .download:hover{
+    background: #3D50A2;
+    color: #fff;
+}
