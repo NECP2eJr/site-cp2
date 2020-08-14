@@ -27,6 +27,7 @@
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/processo-style.css">
 
 </head>
 <body>
@@ -47,7 +48,7 @@
         <ul class="nav-menu">
           <li><a href="index.html">Página Principal </a></li>
           <li class="menu-active"><a href="processo.html">Processo Seletivo</a></li> 
-          <li><a href="blog.html">Blog</a></li> 
+          <!-- <li><a href="blog.html">Blog</a></li> -->
           
         </ul>
       </nav><!-- #nav-menu-container -->
@@ -62,7 +63,7 @@
       <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
         <div class="carousel-inner" role="listbox">
           <div class="carousel-item active">
-            <div class="carousel-background"><img src="img/blog.jpg" alt=""></div>
+            <div class="carousel-background"><img src="img/processo-seletivo.jpg" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
                 <h2>PROCESSO SELETIVO</h2>
@@ -83,7 +84,8 @@
 
         <div class="section-header">
           <h3>Processo Seletivo CP2eJr</h3>
-          <p>Seja parte da nossa equipe!</p>
+          <p>Faça parte da nossa equipe!</p>
+          <p>Prazo para inscrição: 10/08/2020 à 28/08/2020</p>
         </div>
 
         <p style="padding: 20px 0px;">Para fazer sua inscrição, recomendamos que você leia atentamente o
@@ -91,7 +93,7 @@
           onde estão todas as informações sobre as fases do processo, nossa cultura e uma descrição do
           trabalho de cada núcleo.</p>
 
-        <a href="processo_seletivo/edital_ps_cp2ejr.pdf" target="_blank">
+        <a href="processo_seletivo/EDITAL_02.2020_CP2eJr.pdf" target="_blank">
             <button type="button" class="btn btn-default btn-lg download">
                 <span class="glyphicon glyphicon-download-alt"></span> Edital
             </button>
@@ -104,12 +106,18 @@
             <button type="button" class="btn btn-default btn-lg download">
                 <span class="glyphicon glyphicon-download-alt"></span> Ebook
             </button>
-        </a>
+        </a> 
+
         <br> <br>
 
 
         <div class="form">
           <form method="post" action="php/processoseletivo.php" enctype="multipart/form-data">
+
+            <div class="row">
+              <label for="">Informe seus dados: </label>
+            </div>
+
             <div class="row">
               <!-- Nome do candidato -->
               <div class="col-md-4 col-sm-4">
@@ -172,7 +180,7 @@
             <br>
           
             <div class="row">
-                <label for="">Núcleo</label>
+                <label for="">Selecione os núcleos desejados: </label>
             </div>
 
             <div class="row">
@@ -180,10 +188,10 @@
               <div class="col-md-4 col-sm-4">
                   <select required id="nucleosid" name="nucleo_preferencia" class="form-control">
                       <option value="" selected data-default disabled>Núcleo de Interesse</option>
+                      <option value="NC">Núcleo Comercial</option>
                       <option value="NAI">Núcleo de Assuntos Internos</option>
                       <option value="NE">Núcleo de Engenharia</option>
                       <option value="NGCT">Núcleo de Gestão de Conhecimento e Treinamentos</option>
-                      <option value="NPSP">Núcleo de Projetos Sociais e Promoção</option>
                   </select>
               </div>
 
@@ -191,10 +199,10 @@
               <div class="col-md-4 col-sm-4">
                   <select id="nucleosid" name="nucleo_opcional" class="form-control">
                       <option value="">Núcleo Opcional</option>
+                      <option value="NC">Núcleo Comercial</option>
                       <option value="NAI">Núcleo de Assuntos Internos</option>
                       <option value="NE">Núcleo de Engenharia</option>
                       <option value="NGCT">Núcleo de Gestão de Conhecimento e Treinamentos</option>
-                      <option value="NPSP">Núcleo de Projetos Sociais e Promoção</option>
                   </select>
               </div>
             </div>
@@ -216,10 +224,18 @@
           
             <!--Horário do Semestre-->
             <div class="row">
-                <label> Horário do Semestre: </label>
-                <input required name="attach3" type="file"/>
+              <label> Horário do Semestre: </label>
+              <input required name="attach3" type="file"/>
             </div>
             <br>
+
+            <!--Teste DISC-->
+            <div class="row">
+              <p style="padding: 20px 0px;">Faça o teste e informe seu resultado: 
+                <a href="https://www.pactorh.com.br/teste-disc/disc/faca-agora-teste-disc/"> Teste DISC </a>
+                <input class="form-control" id="testeid" name="resultado_teste" required placeholder="Resultado do Teste"/>
+              </p>
+            </div>
           
             <!-- Como ficou sabendo da empresa -->
             <div class="row">
@@ -243,10 +259,16 @@
             <div class="row">
                 <div class="col-md-3 col-sm-6">
                   <div class="text-center">
-                    <button id="submit" name="submit" type="submit" class="form-control" onclick="Enviar();">Enviar Inscrição</button>
+                    <button id="submit" name="submit" type="submit" class="btn btn-default btn-lg download" onclick="Enviar();">Enviar Inscrição</button>
+                    
+                    <!-- <button type="button" class="btn btn-default btn-lg download">
+                    <span class="glyphicon glyphicon-download-alt"></span> Ebook
+                    </button> -->
+                    
                   </div>
                 </div>
             </div>
+            
           </form>
 
         </div>

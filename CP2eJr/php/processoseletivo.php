@@ -16,7 +16,7 @@ include 'PHPMailer/PHPMailerAutoload.php';
 $inicio = "2020-08-08";
 
 //Data de término das inscrições (aaaa-mm-dd) (dia de fechamento + 1)
-$fim = "2020-09-08";
+$fim = "2020-08-28";
 
 //Mensagens de erro
 $outOfDate = 'Infelizmente o Processo Seletivo já foi encerrado!';
@@ -35,6 +35,7 @@ if(strtotime("now") >= strtotime($inicio) && strtotime("now") <= strtotime($fim)
     $email = $_POST['email'];
     $nucleoPref = $_POST['nucleo_preferencia'];
     $nucleoOpc = $_POST['nucleo_opcional'];
+    $resultadoTeste = $_POST['resultado_teste'];
     $comoSoube = $_POST['como_soube'];
     $atividades = $_POST['atividades'];
 
@@ -57,13 +58,12 @@ if(strtotime("now") >= strtotime($inicio) && strtotime("now") <= strtotime($fim)
         }
         
         // Verificação dos campos válidos
-        if($nome != '' && $curso != '' && $periodo != '' && $matricula != '' && $telefone != ''
-                && $email != ''&& $nucleoPref != ''&& $comoSoube != ''&& $atividades != ''){
+        if($nome != '' && $curso != '' && $periodo != '' && $matricula != '' && $telefone != '' && $email != '' && $nucleoPref != ''&& $resultadoTeste != '' && $comoSoube != '' && $atividades != ''){
 
             // Email processo seletivo: processoseletivocp2ejr@inatel.br
             // Dados para envio do email com o formulario preenchido
             $from = 'ngct@cp2ejr.com.br';                                   // Remetente
-            $to = 'paolafreitas@gec.inatel.br';                       // Destinatário
+            $to = 'annapaula@geb.inatel.br';                       // Destinatário
             $subject = 'Processo Seletivo CP2eJr';    
             
             // Mensagem que será enviada para a Empresa Júnior.
@@ -77,6 +77,7 @@ if(strtotime("now") >= strtotime($inicio) && strtotime("now") <= strtotime($fim)
             $message .= "E-Mail do Inatel: $email" . '</br>';
             $message .= "Núcleo de Preferência: $nucleoPref" . '</br>';
             $message .= "Núcleo Opcional: $nucleoOpc" . '</br>';
+            $message .= "Resultado do Teste: $resultadoTeste" . '</br>';
             $message .= "Como ficou sabendo: $comoSoube" . '</br>';
             $message .= "Atividades que participa: $atividades" . '</br>'.'</br>';
 
@@ -97,10 +98,12 @@ if(strtotime("now") >= strtotime($inicio) && strtotime("now") <= strtotime($fim)
         
             //Envia o email para a Empresa Jr.
             if($mail->Send()) {
-                $message = 'Muito obrigado por se interessar e se inscrever em nosso processo seletivo. ';
-                $message .= 'Seu currículo será avaliado e o resultado será divulgado até dia 13 de agosto.' . '</br>' . '</br>';
-                $message .= 'Att.,'.'</br>';
-                $message .= 'CP2eJr – Consultoria de Projetos em Engenharia';
+                $message = 'Prezado(a) candidato(a),' . '</br>' . '</br>';
+                $message .= 'Sua inscrição foi realizada com sucesso no Processo Seletivo da CP2eJr.' . '</br>';
+                $message .= 'Seu currículo será avaliado e o resultado será divulgado até dia 28 de agosto.' . '</br>' . '</br>';
+                $message .= 'Verifique seu e-mail pois enviaremos novas notificações em breve.' . '</br>' . '</br>';
+                $message .= 'Atenciosamente,' . '</br>';
+                $message .= 'Consultoria de Projetos em Engenharia Elétrica- CP2eJr';
 
                 $mail = new PHPMailer();
 
